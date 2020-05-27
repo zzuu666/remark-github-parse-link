@@ -46,8 +46,8 @@ export const projectEnd = (value: string, fromIndex: number) => {
     const size = index - fromIndex;
 
     if (
-        size !== 0 ||
-        size < maxProjectLength ||
+        size === 0 ||
+        size > maxProjectLength ||
         value.slice(index - gitSuffix.length, index) === gitSuffix
     ) {
         return -1;
