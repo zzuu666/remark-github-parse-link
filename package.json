@@ -2,17 +2,25 @@
   "name": "remark-github-parse-link",
   "version": "0.0.1",
   "description": "parse remark-github node to get raw info.",
-  "main": "index.js",
+  "files": ["dist", "typings"],
+  "main": "dist/index.js",
+  "typings": "typings",
   "repository": "https://github.com/zzuu666/remark-github-parse-link",
   "author": "zzuu666 <zzuu666@outlook.com>",
   "license": "MIT",
   "scripts": {
-      "build": "tsc"
+    "build": "tsc",
+    "test": "yarn build && yarn jest"
   },
   "devDependencies": {
     "@types/mdast": "^3.0.3",
     "@types/unist": "^2.0.3",
-    "typescript": "^3.9.3"
+    "jest": "^26.0.1",
+    "remark-github": "^9.0.0",
+    "remark-parse": "^8.0.2",
+    "typescript": "^3.9.3",
+    "unified": "^9.0.0",
+    "unist-util-visit": "^2.0.2"
   },
   "dependencies": {
     "is-alphabetical": "^1.0.4",
