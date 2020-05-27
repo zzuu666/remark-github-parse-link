@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "yarn build && yarn jest"
+    "test": "yarn build && yarn jest",
+    "prepublish": "yarn test"
   },
   "devDependencies": {
     "@types/mdast": "^3.0.3",
