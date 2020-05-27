@@ -1,0 +1,23 @@
+{
+  "name": "remark-github-parse-link",
+  "version": "0.0.1",
+  "description": "parse remark-github node to get raw info.",
+  "main": "index.js",
+  "repository": "https://github.com/zzuu666/remark-github-parse-link",
+  "author": "zzuu666 <zzuu666@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+      "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3.0.3",
+    "@types/unist": "^2.0.3",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "is-alphabetical": "^1.0.4",
+    "is-decimal": "^1.0.4",
+    "is-hexadecimal": "^1.0.4",
+    "mdast-util-to-string": "^1.1.0"
+  }
+}
