@@ -7,10 +7,12 @@ interface ParseResult {
     project?: string;
     page?: string;
     reference?: string;
+    comment?: string;
 }
 
 type parseFn = (node: Link, repository?: string) => ParseResult;
 const slash = 47; //  '/'
+const numberSign = 35 //  '#'
 
 export const parse: parseFn = (node, repository = "https://github.com/") => {
     const result: ParseResult = {};
@@ -80,6 +82,10 @@ export const parse: parseFn = (node, repository = "https://github.com/") => {
     const reference = url.slice(start, end);
 
     result.reference = reference;
+
+    if (url.charCodeAt(end) === numberSign && url.length > end + 1) {
+        result.comment = url.slice(end + 1)
+    }
 
     return result;
 };

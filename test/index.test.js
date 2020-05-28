@@ -66,3 +66,22 @@ test('can get pulls', () => {
         expect(result).toMatchObject(desired)
     })
 })
+
+
+test('can get comment', () => {
+    const text = `this is an comment https://github.com/facebook/react/issues/16604#issuecomment-528652891`
+    const parser = unified().use(markdown).use(github)
+    const tree = parser.parse(text)
+    const desired = {
+        namespace: 'facebook',
+        project: 'react',
+        page: 'issues',
+        reference: '16604',
+        comment: 'issuecomment-528652891'
+    }
+
+    visit(tree, 'link', (node) => {
+        const result = parse(node)
+        expect(result).toMatchObject(desired)
+    })
+})
