@@ -1,6 +1,6 @@
 {
   "name": "remark-github-parse-link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "parse remark-github node to get raw info.",
   "files": ["dist", "typings"],
   "main": "dist/index.js",
