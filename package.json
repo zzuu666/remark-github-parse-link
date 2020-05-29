@@ -2,7 +2,10 @@
   "name": "remark-github-parse-link",
   "version": "0.0.2",
   "description": "parse remark-github node to get raw info.",
-  "files": ["dist", "typings"],
+  "files": [
+    "dist",
+    "typings"
+  ],
   "main": "dist/index.js",
   "typings": "typings",
   "repository": "https://github.com/zzuu666/remark-github-parse-link",
@@ -11,7 +14,7 @@
   "scripts": {
     "build": "tsc",
     "test": "yarn build && yarn jest",
-    "prepublish": "yarn test"
+    "preversion": "yarn test"
   },
   "devDependencies": {
     "@types/mdast": "^3.0.3",
